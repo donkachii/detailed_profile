@@ -1,0 +1,17 @@
+.btn_profile {
+  background: #eaecf0;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #101828;
+}
