@@ -38,6 +38,7 @@
 }
 
 .profile_heading {
+  position: relative;
   font-style: normal;
   font-weight: 700;
   font-size: 1.25rem;
@@ -47,4 +48,21 @@
   flex: none;
   order: 0;
   flex-grow: 1;
+}
+
+.share_tip {
+  border-radius: 8px !important;
+}
+
+.btn_share {
+  position: absolute;
+  top: 7%;
+  right: 20%;
+}
+
+.btn_share:focus {
+  outline: none;
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd;
+  border-radius: 20px;
 }
