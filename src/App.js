@@ -13,8 +13,6 @@ import ReactTooltip from "react-tooltip";
 function App() {
   const [isShown, setIsShown] = useState(false);
 
-  console.log(isShown);
-
   return (
     <div className="App px-4 md:px-28 w-full">
       <section className="md:px-8">
@@ -90,23 +88,23 @@ function App() {
             <path
               d="M21 21.8334C21.4602 21.8334 21.8333 21.4603 21.8333 21.0001C21.8333 20.5398 21.4602 20.1667 21 20.1667C20.5397 20.1667 20.1666 20.5398 20.1666 21.0001C20.1666 21.4603 20.5397 21.8334 21 21.8334Z"
               stroke={isShown ? "#667085" : "#98A2B3"}
-              stroke-width="1.66667"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M26.8333 21.8334C27.2935 21.8334 27.6666 21.4603 27.6666 21.0001C27.6666 20.5398 27.2935 20.1667 26.8333 20.1667C26.3731 20.1667 26 20.5398 26 21.0001C26 21.4603 26.3731 21.8334 26.8333 21.8334Z"
               stroke={isShown ? "#667085" : "#98A2B3"}
-              stroke-width="1.66667"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M15.1666 21.8334C15.6269 21.8334 16 21.4603 16 21.0001C16 20.5398 15.6269 20.1667 15.1666 20.1667C14.7064 20.1667 14.3333 20.5398 14.3333 21.0001C14.3333 21.4603 14.7064 21.8334 15.1666 21.8334Z"
               stroke={isShown ? "#667085" : "#98A2B3"}
-              stroke-width="1.66667"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1.66667"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <rect
               x="1"
@@ -115,14 +113,15 @@ function App() {
               height="40"
               rx="20"
               stroke="#D0D5DD"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-dasharray="1 3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="1 3"
             />
           </svg>
           <article className="flex items-center justify-center">
             <div className="profile_container cursor-pointer">
               <img
+                id="profile__img"
                 className="profile_img"
                 src={profileImg}
                 alt="profile__img"
@@ -131,7 +130,9 @@ function App() {
               <img className="camera_img" src={cameraIcon} alt="" />
             </div>
           </article>
-          <h1 className="profile_heading pt-6">Annette Black</h1>
+          <h1 className="profile_heading pt-6">
+            {process.env.REACT_APP_SLACK__USERNAME}
+          </h1>
         </header>
         <section className="">
           {buttonNames.map((name, i) => (
@@ -140,17 +141,22 @@ function App() {
         </section>
         <article className="container flex items-center justify-center pb-16">
           <div className="flex space-x-6">
-            <img src={slackImg} alt="slack" />
-            <img src={githubImg} alt="github" />
+            <img
+              className="cursor-pointer"
+              src={slackImg}
+              id="slack"
+              alt="slack"
+            />
+            <img className="cursor-pointer" src={githubImg} alt="github" />
           </div>
         </article>
       </section>
       <footer className=" w-full">
         <hr />
         <div className="space-y-4 md:flex items-center justify-between py-12 w-full md:space-y-0">
-          <img src={zuriImg} alt="slack" />
+          <img src={zuriImg} alt="zuri" />
           <p className="text-left">HNG Internship 9 Frontend Task</p>
-          <img src={ingressiveImg} alt="github" />
+          <img src={ingressiveImg} alt="ingressive" />
         </div>
       </footer>
     </div>
