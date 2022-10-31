@@ -12,7 +12,6 @@ import ReactTooltip from "react-tooltip";
 
 function App() {
   const [isShown, setIsShown] = useState(false);
-  console.log(process.env.REACT_APP_SLACK__USERNAME);
 
   return (
     <div className="App px-4 md:px-28 w-full">
