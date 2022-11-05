@@ -8,7 +8,7 @@ const NotFound = () => {
     setTimeout(() => {
       navigate(-1);
     });
-  }, []);
+  }, [navigate]);
   return (
     <div className="flex justify-center items-center">
       <h1>Not Found</h1>
