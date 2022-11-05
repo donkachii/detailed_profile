@@ -5,7 +5,7 @@ textarea {
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 10px 14px;
-  color: #667085;
+  color: #101828;
   background: #ffffff;
   border: 1px solid #d0d5dd;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -16,10 +16,37 @@ textarea {
   padding: 12px 14px;
 }
 
-.contact input[type="checkbox"] {
+.contact input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 1px solid #84caff;
+}
+
+.contact input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: #667085;
+}
+
+.contact_ckeck {
   background: #ffffff;
   border: 1px solid #d0d5dd;
   border-radius: 6px;
+}
+
+.contact_ckeck:checked {
+  background: #f9fafb;
+  border: 1px solid #1570ef;
+}
+
+.contact_ckeck:focus {
+  background: #ffffff;
+  border: 1px solid #84caff;
+}
+
+.contact_ckeck:disabled {
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd;
 }
 
 .contact_header {
@@ -57,4 +84,20 @@ textarea {
   border: 1px solid #1570ef;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 8px;
+}
+
+.btn_contact:hover {
+  background: #175cd3;
+  border: 1px solid #175cd3;
+}
+
+.btn_contact:focus {
+  background: #1570ef;
+  border: 1px solid #1570ef;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #d1e9ff;
+}
+
+.btn_contact:disabled {
+  background: #b2ddff;
+  border: 1px solid #b2ddff;
 }

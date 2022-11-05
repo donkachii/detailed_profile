@@ -7,7 +7,7 @@ function Button({ name, link, id }) {
       className="btn_profile py-6 w-full mb-6"
       id={id}
       onClick={(e) => {
-        window.open(link);
+        window.open(link, "_self");
         e.preventDefault();
       }}
     >
